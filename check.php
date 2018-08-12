@@ -1,5 +1,5 @@
 <?php
-require_once('../wp-config.php');
+require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-config.php' );
 if ( get_option('db_version') != $wp_db_version ) {
 	wp_redirect(admin_url('upgrade.php?_wp_http_referer=' . urlencode(stripslashes($_SERVER['REQUEST_URI']))));
 	exit;
